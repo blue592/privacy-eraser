@@ -1,4 +1,4 @@
-# RedactKit — 개인정보·API 키 자동 마스킹
+# 개인정보지우개 — 개인정보 스티커처리
 
 로컬에서 개인정보와 비밀값을 자동 마스킹하는 Node.js CLI·라이브러리입니다.
 
@@ -14,9 +14,10 @@
 privacy-mask < raw.log > safe.log
 privacy-mask --names --file input.txt --out safe.txt
 privacy-mask --json < payload.json
+privacy-mask --names --style sticker < source.md > safe.md
 ```
 
-모든 처리는 로컬에서 수행하며 파일이나 입력을 외부로 전송하지 않습니다. 정규식 기반 도구이므로 주민등록증 사진, 얼굴·음성·필체 같은 비정형 정보와 문맥상 이름은 완벽히 판별하지 못합니다. 결과를 공개하기 전에 직접 검토하세요.
+`--style sticker`를 사용하면 발견한 값을 `⟦개인정보⟧`로 바꿉니다. 이미지 adapter에서는 OCR 좌표 위에 같은 스티커를 그리는 방식으로 확장할 수 있습니다. 모든 처리는 로컬에서 수행하며 파일이나 입력을 외부로 전송하지 않습니다. 정규식 기반 도구이므로 결과를 공개하기 전에 직접 검토하세요.
 
 ## License
 
