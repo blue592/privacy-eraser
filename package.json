@@ -1,0 +1,10 @@
+{
+  "name": "redact-kit",
+  "version": "0.1.0",
+  "description": "RedactKit: local-first CLI and library for masking personal data and secrets.",
+  "type": "module",
+  "bin": { "privacy-mask": "src/cli.js" },
+  "scripts": { "test": "node --test" },
+  "license": "MIT"
+}
+
